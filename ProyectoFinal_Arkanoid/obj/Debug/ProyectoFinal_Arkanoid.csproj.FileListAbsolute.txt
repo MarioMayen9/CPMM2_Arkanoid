@@ -1,0 +1,8 @@
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\bin\Debug\ProyectoFinal_Arkanoid.exe.config
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\bin\Debug\ProyectoFinal_Arkanoid.exe
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\bin\Debug\ProyectoFinal_Arkanoid.pdb
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.Properties.Resources.resources
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.csproj.GenerateResource.cache
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.exe
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.pdb

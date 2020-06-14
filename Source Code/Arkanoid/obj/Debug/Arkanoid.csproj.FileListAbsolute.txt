@@ -9,3 +9,13 @@ C:\Users\Walter\Documents\Workspaces\POO\ProyectoPOO\Source Code\Arkanoid\obj\De
 C:\Users\Walter\Documents\Workspaces\POO\ProyectoPOO\Source Code\Arkanoid\obj\Debug\Arkanoid.pdb
 C:\Users\Walter\Documents\Workspaces\POO\ProyectoPOO\Source Code\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
 C:\Users\Walter\Documents\Workspaces\POO\ProyectoPOO\Source Code\Arkanoid\obj\Debug\Arkanoid.ControlArkanoid.resources
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\bin\Debug\Arkanoid.exe.config
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\bin\Debug\Arkanoid.exe
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\bin\Debug\Arkanoid.pdb
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.ControlArkanoid.resources
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.Form1.resources
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.Properties.Resources.resources
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.csproj.GenerateResource.cache
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.exe
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\Source Code\Arkanoid\obj\Debug\Arkanoid.pdb
