@@ -40,7 +40,7 @@ namespace ProyectoFinal_Arkanoid
                 MessageBox.Show("Has perdido");
 
                 ca.Hide();
-                tableLayoutPanel1.Show();
+                
             };
         }
 
@@ -51,7 +51,7 @@ namespace ProyectoFinal_Arkanoid
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Hide();
+            
             Controls.Add(ca);
         }
 
