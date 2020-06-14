@@ -68,7 +68,7 @@ namespace ProyectoFinal_Arkanoid
                     cpb[i, j].Left = j * pbWidth;
                     cpb[i, j].Top = i * pbHeight;
 
-                    cpb[i, j].BackgroundImage = Image.FromFile("../../Img/" + GRN() + ".png");
+                    cpb[i, j].BackgroundImage = Image.FromFile("../../Recursos/" + GRN() + ".png");
                     cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
 
                     cpb[i, j].Tag = "tileTag";
@@ -76,6 +76,10 @@ namespace ProyectoFinal_Arkanoid
                     Controls.Add(cpb[i, j]);
                 }
             }
+        }
+        private int GRN()
+        {
+            return new Random().Next(1, 8);
         }
     }
 }
