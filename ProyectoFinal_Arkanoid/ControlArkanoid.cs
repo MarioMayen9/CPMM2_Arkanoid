@@ -81,5 +81,81 @@ namespace ProyectoFinal_Arkanoid
         {
             return new Random().Next(1, 8);
         }
+
+        private void ControlArkanoid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!DatosJuego.juegoIniciado)
+            {
+                if (e.X < (Width - pictureBox1.Width))
+                {
+                    pictureBox1.Left = e.X;
+                    ball.Left = pictureBox1.Left + (pictureBox1.Width / 2) - (ball.Width / 2);
+                }
+            }
+            else
+            {
+                if (e.X < (Width - pictureBox1.Width))
+                    pictureBox1.Left = e.X;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (!DatosJuego.juegoIniciado)
+                return;
+
+            MovimientoPelota?.Invoke();
+        }
+
+        private void ControlArkanoid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+                DatosJuego.juegoIniciado = true;
+        }
+        private void RebotarPelota()
+        {
+            if (ball.Bottom > Height)
+            {
+                timer1.Stop();
+                TerminarJuego?.Invoke();
+            }
+
+            if (ball.Left < 0 || ball.Right > Width)
+            {
+                DatosJuego.dirX = -DatosJuego.dirX;
+                return;
+            }
+
+            if (ball.Bounds.IntersectsWith(pictureBox1.Bounds))
+            {
+                DatosJuego.dirY = -DatosJuego.dirY;
+            }
+
+            for (int i = 4; i >= 0; i--)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (cpb[i, j] != null && ball.Bounds.IntersectsWith(cpb[i, j].Bounds))
+                    {
+                        cpb[i, j].Golpes--;
+
+                        if (cpb[i, j].Golpes == 0)
+                        {
+                            Controls.Remove(cpb[i, j]);
+                            cpb[i, j] = null;
+                        }
+
+                        DatosJuego.dirY = -DatosJuego.dirY;
+
+                        return;
+                    }
+                }
+            }
+        }
+        private void MoverPelota()
+        {
+            ball.Left += DatosJuego.dirX;
+            ball.Top += DatosJuego.dirY;
+        }
     }
 }

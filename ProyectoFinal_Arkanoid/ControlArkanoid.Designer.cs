@@ -45,6 +45,11 @@ namespace ProyectoFinal_Arkanoid
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 25;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ControlArkanoid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -53,6 +58,8 @@ namespace ProyectoFinal_Arkanoid
             this.Name = "ControlArkanoid";
             this.Size = new System.Drawing.Size(637, 482);
             this.Load += new System.EventHandler(this.ControlArkanoid_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlArkanoid_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ControlArkanoid_MouseMove);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
