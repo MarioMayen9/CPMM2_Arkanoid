@@ -8,6 +8,7 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="ControlArkanoid.cs" t="Include" />
       <e p="ControlArkanoid.Designer.cs" t="Include" />
+      <e p="ControlArkanoid.resx" t="Include" />
       <e p="CustomPictureBox.cs" t="Include" />
       <e p="DatosJuego.cs" t="Include" />
       <e p="Form1.cs" t="Include" />
