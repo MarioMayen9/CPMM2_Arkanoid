@@ -52,8 +52,10 @@ namespace ProyectoFinal_Arkanoid
 
             for (int i = 0; i < yAxis; i++)
             {
+                
                 for (int j = 0; j < xAxis; j++)
                 {
+                    
                     cpb[i, j] = new CustomPictureBox();
 
                     if (i == 0)
