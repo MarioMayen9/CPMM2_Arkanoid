@@ -16,3 +16,5 @@ C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\o
 C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\bin\Debug\ProyectoFinal_Arkanoid.exe.config
 C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\bin\Debug\ProyectoFinal_Arkanoid.exe
 C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\bin\Debug\ProyectoFinal_Arkanoid.pdb
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.ControlArkanoid.resources
+C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.Form1.resources

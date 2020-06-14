@@ -34,30 +34,45 @@ namespace ProyectoFinal_Arkanoid
 
             ca.TerminarJuego = () =>
             {
-                ca = null;
-                ca = new ControlArkanoid();
+                ca = null; ca = new ControlArkanoid();
 
                 MessageBox.Show("Has perdido");
 
                 ca.Hide();
+                tableLayoutPanel1.Show();
                 
             };
         }
 
-        private void button3_Click(object sender, EventArgs e)
+       /* private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+           // Form1.Hide();
             Controls.Add(ca);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sin implementar aun");
-        }
+        }*/
+       private void btnIniciar_Click(object sender, EventArgs e)
+       {
+           tableLayoutPanel1.Hide();
+           Controls.Add(ca);
+       }
+
+       private void btnPuntajes_Click(object sender, EventArgs e)
+       {
+           MessageBox.Show("Sin implementar aun");
+       }
+
+       private void btnSalir_Click(object sender, EventArgs e)
+       {
+           Application.Exit();
+       }
     }
 }
