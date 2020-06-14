@@ -10,21 +10,54 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_Arkanoid
 {
+    
     public partial class Form1 : Form
     {
+        private ControlArkanoid ca;
+
         public Form1()
         {
             InitializeComponent();
+            Height = ClientSize.Height;
+            Width = ClientSize.Width;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            ca = new ControlArkanoid();
+
+            ca.Dock = DockStyle.Fill;
+
+            ca.Width = Width;
+            ca.Height = Height;
+
+            ca.TerminarJuego = () =>
+            {
+                ca = null;
+                ca = new ControlArkanoid();
+
+                MessageBox.Show("Has perdido");
+
+                ca.Hide();
+                tableLayoutPanel1.Show();
+            };
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Hide();
+            Controls.Add(ca);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sin implementar aun");
         }
     }
 }
