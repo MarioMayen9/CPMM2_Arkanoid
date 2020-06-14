@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Carlos\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Carlos\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ProyectoFinal_Arkanoid.-2056993791.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid" t="IncludeRecursive">
+    <e p="C:\Users\MM600891\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\MM600891\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_ProyectoFinal_Arkanoid.1606977705.00" t="ExcludeRecursive" />
+    <e p="C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="ControlArkanoid.cs" t="Include" />
