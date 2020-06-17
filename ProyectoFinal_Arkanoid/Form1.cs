@@ -67,12 +67,19 @@ namespace ProyectoFinal_Arkanoid
 
        private void btnPuntajes_Click(object sender, EventArgs e)
        {
-           MessageBox.Show("Sin implementar aun");
+          Top ft = new Top();
+           ft.Show();
+           
        }
 
        private void btnSalir_Click(object sender, EventArgs e)
        {
            Application.Exit();
+       }
+
+       private void pictureBox1_Click(object sender, EventArgs e)
+       {
+           throw new System.NotImplementedException();
        }
     }
 }

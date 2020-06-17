@@ -26,6 +26,9 @@
       </e>
       <e p="ProyectoFinal_Arkanoid.csproj" t="IncludeRecursive" />
       <e p="ProyectoFinal_Arkanoid.sln" t="IncludeFlat" />
+      <e p="Top.cs" t="Include" />
+      <e p="Top.Designer.cs" t="Include" />
+      <e p="Top.resx" t="Include" />
     </e>
   </component>
 </project>

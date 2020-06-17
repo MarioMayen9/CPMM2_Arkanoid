@@ -39,9 +39,9 @@ namespace ProyectoFinal_Arkanoid
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(236, 385);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 334);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 37);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -52,11 +52,11 @@ namespace ProyectoFinal_Arkanoid
             // 
             // ControlArkanoid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
             this.Name = "ControlArkanoid";
-            this.Size = new System.Drawing.Size(637, 482);
+            this.Size = new System.Drawing.Size(546, 418);
             this.Load += new System.EventHandler(this.ControlArkanoid_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlArkanoid_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ControlArkanoid_MouseMove);
@@ -64,9 +64,9 @@ namespace ProyectoFinal_Arkanoid
             this.ResumeLayout(false);
         }
 
-        #endregion
-
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+
+        #endregion
     }
 }

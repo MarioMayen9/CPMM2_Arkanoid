@@ -37,7 +37,7 @@ namespace ProyectoFinal_Arkanoid
             ball.Left = pictureBox1.Left + (pictureBox1.Width / 2) - (ball.Width / 2);
 
             Controls.Add(ball);
-
+    
             LoadTiles();
             timer1.Start();
         }
