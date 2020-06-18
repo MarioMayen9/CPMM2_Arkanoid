@@ -141,7 +141,7 @@ namespace ProyectoFinal_Arkanoid
         {
             if (!DatosJuego.juegoIniciado)
                 return;
-            
+            DatosJuego.ticksCount += 0.01;
             try
             {
                 MovimientoPelota?.Invoke();

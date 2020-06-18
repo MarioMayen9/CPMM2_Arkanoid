@@ -21,3 +21,4 @@ C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug
 C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.Top.resources
 C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.Top.resources
 C:\Users\Carlos\Desktop\Proyecto\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.RegisterUser.resources
+C:\Users\MM600891\Desktop\Proyecto Final\CPMM2_Arkanoid\ProyectoFinal_Arkanoid\obj\Debug\ProyectoFinal_Arkanoid.RegisterUser.resources
