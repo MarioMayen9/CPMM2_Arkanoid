@@ -32,6 +32,8 @@ namespace ProyectoFinal_Arkanoid
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(ControlArkanoid));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -39,9 +41,9 @@ namespace ProyectoFinal_Arkanoid
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(202, 334);
+            this.pictureBox1.Location = new System.Drawing.Point(236, 385);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(161, 43);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -52,11 +54,12 @@ namespace ProyectoFinal_Arkanoid
             // 
             // ControlArkanoid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.pictureBox1);
             this.Name = "ControlArkanoid";
-            this.Size = new System.Drawing.Size(546, 418);
+            this.Size = new System.Drawing.Size(637, 482);
             this.Load += new System.EventHandler(this.ControlArkanoid_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlArkanoid_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ControlArkanoid_MouseMove);

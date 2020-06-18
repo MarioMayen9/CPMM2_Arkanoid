@@ -2,7 +2,7 @@
 
 namespace ProyectoFinal_Arkanoid
 {
-    partial class Top
+    partial class RegisterUser
     {
         /// <summary>
         /// Required designer variable.
@@ -32,24 +32,49 @@ namespace ProyectoFinal_Arkanoid
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(Top));
+                new System.ComponentModel.ComponentResourceManager(typeof(RegisterUser));
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Top
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(81, 135);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 42);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Entrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(46, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 23);
+            this.textBox1.TabIndex = 1;
+            // 
+            // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(315, 519);
+            this.ClientSize = new System.Drawing.Size(296, 189);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Top";
+            this.Name = "RegisterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Top";
+            this.Text = "Registrar Jugador";
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
