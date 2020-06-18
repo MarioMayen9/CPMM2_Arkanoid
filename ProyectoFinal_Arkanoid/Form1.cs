@@ -47,7 +47,7 @@ namespace ProyectoFinal_Arkanoid
                 tableLayoutPanel1.Show();
                 
             };
-            // Seteo de Delegate que maneja cuando se gana el juego
+            
             ca.WinningGame = () =>
             {
                 PlayerController.CreateNewScore(currentPlayer.idPlayer, DatosJuego.score);
@@ -82,24 +82,7 @@ namespace ProyectoFinal_Arkanoid
 
             Controls.Add(ca);
         }
-
         
-
-       /* private void button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           // Form1.Hide();
-            Controls.Add(ca);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Sin implementar aun");
-        }*/
        private void btnIniciar_Click(object sender, EventArgs e)
        {
       

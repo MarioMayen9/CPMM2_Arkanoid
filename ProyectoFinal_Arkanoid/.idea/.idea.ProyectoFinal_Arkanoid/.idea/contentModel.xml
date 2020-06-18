@@ -24,6 +24,7 @@
       <e p="Form1.resx" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
       <e p="Player.cs" t="Include" />
       <e p="PlayerController.cs" t="Include" />
       <e p="Program.cs" t="Include" />
