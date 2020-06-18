@@ -48,6 +48,7 @@ namespace ProyectoFinal_Arkanoid
                ca = null; ca = new ControlArkanoid();
 
                MessageBox.Show("Has perdido");
+               PlayerController.CreateNewScore(currentPlayer.idPlayer, DatosJuego.score);
 
                ca.Hide();
                tableLayoutPanel1.Show();
