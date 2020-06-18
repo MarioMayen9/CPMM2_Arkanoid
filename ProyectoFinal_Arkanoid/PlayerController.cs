@@ -18,7 +18,6 @@ namespace Arkanoid.Controlador
             {
                 DataBaseController.ExecuteNonQuery("INSERT INTO PLAYER(nickname) VALUES" +
                                                    $"('{nickname}')");
-
                 return false;
             }
         }

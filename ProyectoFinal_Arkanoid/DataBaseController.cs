@@ -15,14 +15,10 @@ namespace Arkanoid
         {
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             DataSet ds = new DataSet();
-
             conn.Open();
-
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, conn);
             da.Fill(ds);
-
             conn.Close();
-
             return ds.Tables[0];
         }
 
