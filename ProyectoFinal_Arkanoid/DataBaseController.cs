@@ -8,8 +8,8 @@ namespace Arkanoid
         private static readonly string connectionString = "Server=127.0.0.1;" +
                                                           "Port=5432;" +
                                                           "User Id=postgres;" +
-                                                          "Password=uca;" +
-                                                          "Database=Arkanoid;";
+                                                          "Password=carlos;" +
+                                                          "Database=Arkanoid_BD;";
 
         public static DataTable ExecuteQuery(string query)
         {
