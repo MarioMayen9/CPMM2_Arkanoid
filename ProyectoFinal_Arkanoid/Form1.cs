@@ -109,8 +109,16 @@ namespace ProyectoFinal_Arkanoid
 
        private void btnPuntajes_Click(object sender, EventArgs e)
        {
-          Top ft = new Top();
+           Top ft = new Top
+           {
+               CloseAction = () =>
+               {
+                   Show();
+               }
+           };
+
            ft.Show();
+           Hide();
            
        }
 
