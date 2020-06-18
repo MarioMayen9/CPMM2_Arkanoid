@@ -41,7 +41,8 @@ namespace ProyectoFinal_Arkanoid
         {
             BackColor = Color.Transparent;
             ScoresPanel();
-
+            
+            //carga la imagen de la nave de arkanoid
             pictureBox1.BackgroundImage = Image.FromFile("../../Recursos/NaveArkanoid.png");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -50,7 +51,7 @@ namespace ProyectoFinal_Arkanoid
             
             ball = new PictureBox();
             ball.Width = ball.Height = 20;
-            
+            //carga la bola1
             ball.BackgroundImage = Image.FromFile("../../Recursos/bola1.png");
             ball.BackgroundImageLayout = ImageLayout.Stretch;
 
