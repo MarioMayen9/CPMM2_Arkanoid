@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using ProyectoFinal_Arkanoid;
 
-namespace Arkanoid.Controlador
+namespace Arkanoid
 {
     public static class PlayerController
     {
@@ -24,7 +24,7 @@ namespace Arkanoid.Controlador
 
         public static void CreateNewScore(int idPlayer, int score)
         {
-            DataBaseController.ExecuteNonQuery("INSERT INTO SCORE(idPlayer, score) VALUES" +
+            DataBaseController.ExecuteNonQuery("INSERT INTO SCORES(idPlayer, score) VALUES" +
                                                $"({idPlayer}, {score})");
         }
 

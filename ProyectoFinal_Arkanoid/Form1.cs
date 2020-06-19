@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Arkanoid.Controlador;
+using Arkanoid;
+
 
 namespace ProyectoFinal_Arkanoid
 {
@@ -36,19 +37,21 @@ namespace ProyectoFinal_Arkanoid
 
        private void btnIniciar_Click(object sender, EventArgs e)
        {
-           ca = new ControlArkanoid();
+           DatosJuego.inicializarJuego();
 
-           ca.Dock = DockStyle.Fill;
+           ca = new ControlArkanoid
+           {
+               Dock = DockStyle.Fill,
 
-           ca.Width = Width;
-           ca.Height = Height;
+               Width = Width,
+               Height = Height
+           };
+
+           
 
            ca.TerminarJuego = () =>
            {
-               ca = null; ca = new ControlArkanoid();
-
                MessageBox.Show("Has perdido");
-               PlayerController.CreateNewScore(currentPlayer.idPlayer, DatosJuego.score);
 
                ca.Hide();
                tableLayoutPanel1.Show();
