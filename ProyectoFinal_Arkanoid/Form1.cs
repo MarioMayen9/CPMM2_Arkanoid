@@ -37,7 +37,7 @@ namespace ProyectoFinal_Arkanoid
 
        private void btnIniciar_Click(object sender, EventArgs e)
        {
-           DatosJuego.inicializarJuego();
+           DatosJuego.InitializeGame();
 
            ca = new ControlArkanoid
            {
@@ -49,9 +49,9 @@ namespace ProyectoFinal_Arkanoid
 
            
 
-           ca.TerminarJuego = () =>
+           ca.FinishGame = () =>
            {
-               MessageBox.Show("Has perdido");
+               MessageBox.Show("GAME OVER :(");
 
                ca.Hide();
                tableLayoutPanel1.Show();
@@ -62,7 +62,7 @@ namespace ProyectoFinal_Arkanoid
            {
                PlayerController.CreateNewScore(currentPlayer.idPlayer, DatosJuego.score);
 
-               MessageBox.Show("Has ganado!");
+               MessageBox.Show("ENHORABUENA HAS GANADO");
 
                ca.Hide();
                tableLayoutPanel1.Show();

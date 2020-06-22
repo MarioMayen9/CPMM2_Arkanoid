@@ -11,21 +11,21 @@ namespace ProyectoFinal_Arkanoid
         private Label remainingLifes, score;
         private PictureBox ball;
         
-        private double tiempoTranscurido = 0, tiempoLimite = 4;
+        private double TimeElapsed = 0, TimeLimit = 4;
         private int remainingPb = 0;
         
         private PictureBox heart;
         private PictureBox[] hearts;
 
-        private delegate void AccionesPelota();
-        private readonly AccionesPelota MovimientoPelota;
-        public Action TerminarJuego, WinningGame;
+        private delegate void BallActions();
+        private readonly BallActions BallMovements;
+        public Action FinishGame, WinningGame;
         public ControlArkanoid()
         {
             InitializeComponent();
             
-            MovimientoPelota = RebotarPelota;
-            MovimientoPelota += MoverPelota;
+            BallMovements = BounceBall;
+            BallMovements += MoveBall;
         }
         protected override CreateParams CreateParams
         {
@@ -42,7 +42,6 @@ namespace ProyectoFinal_Arkanoid
             BackColor = Color.Transparent;
             ScoresPanel();
             
-            //carga la imagen de la nave de arkanoid
             pictureBox1.BackgroundImage = Image.FromFile("../../Recursos/NaveArkanoid.png");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -51,8 +50,8 @@ namespace ProyectoFinal_Arkanoid
             
             ball = new PictureBox();
             ball.Width = ball.Height = 20;
-            //carga la bola1
-            ball.BackgroundImage = Image.FromFile("../../Recursos/bola1.png");
+            
+            ball.BackgroundImage = Image.FromFile("../../Recursos/bola.png");
             ball.BackgroundImageLayout = ImageLayout.Stretch;
 
             ball.Top = pictureBox1.Top - ball.Height;
@@ -82,9 +81,9 @@ namespace ProyectoFinal_Arkanoid
                     cpb[i, j] = new CustomPictureBox();
 
                     if (i == 4)
-                        cpb[i, j].Golpes = 2;
+                        cpb[i, j].Hits = 2;
                     else
-                        cpb[i, j].Golpes = 1;
+                        cpb[i, j].Hits = 1;
 
                     cpb[i, j].Height = pbHeight;
                     cpb[i, j].Width = pbWidth;
@@ -94,12 +93,12 @@ namespace ProyectoFinal_Arkanoid
                     cpb[i, j].Top = i * pbHeight + scorePanel.Height + 1;
 
                     int imageBack;
-                    if (i % 2 == 0 && j % 2 == 0)
-                        imageBack = 3;
-                    else if (i % 2 == 0 && j % 2 != 0)
-                        imageBack = 4;
-                    else if (i % 2 != 0 && j % 2 == 0)
-                        imageBack = 4;
+                    if (i == 0)
+                        imageBack = 9;
+                    else if (i == 1)
+                        imageBack = 1;
+                    else if (i == 2)
+                        imageBack = 2;
                     else
                         imageBack = 3;
 
@@ -122,7 +121,7 @@ namespace ProyectoFinal_Arkanoid
         }
         private void ControlArkanoid_MouseMove(object sender, MouseEventArgs e)
         {
-            if (!DatosJuego.juegoIniciado)
+            if (!DatosJuego.GameStarted)
             {
                 if (e.X < (Width - pictureBox1.Width))
                 {
@@ -139,25 +138,25 @@ namespace ProyectoFinal_Arkanoid
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!DatosJuego.juegoIniciado)
+            if (!DatosJuego.GameStarted)
                 return;
             DatosJuego.ticksCount += 0.01;
             try
             {
-                MovimientoPelota?.Invoke();
+                BallMovements?.Invoke();
             }
             catch(OutOfBoundsException ex)
             {
                 try
                 {
-                    DatosJuego.vidas--;
-                    DatosJuego.juegoIniciado = false;
+                    DatosJuego.lifes--;
+                    DatosJuego.GameStarted = false;
                     timer1.Stop();
 
                     RepositionElements();
                     UpdateElements();
 
-                    if (DatosJuego.vidas == 0)
+                    if (DatosJuego.lifes == 0)
                     {
                         throw new NoRemainingLifesException("");
                     }
@@ -165,7 +164,7 @@ namespace ProyectoFinal_Arkanoid
                 catch (NoRemainingLifesException ex2)
                 {
                     timer1.Stop();
-                    TerminarJuego?.Invoke();
+                    FinishGame?.Invoke();
                 }
             }
         }
@@ -174,16 +173,16 @@ namespace ProyectoFinal_Arkanoid
         {
             try
             {
-                if (!DatosJuego.juegoIniciado)
+                if (!DatosJuego.GameStarted)
                 {
                     switch (e.KeyCode)
                     {
                         case Keys.Space:
-                            DatosJuego.juegoIniciado = true;
+                            DatosJuego.GameStarted = true;
                             timer1.Start();
                             break;
                         default:
-                            throw new WrongKeyPressedException("Presione Space para iniciar el juego");
+                            throw new WrongKeyPressedException("Presione la tecla ESPACIO para iniciar el juego");
                     }
                 }
             }
@@ -193,7 +192,7 @@ namespace ProyectoFinal_Arkanoid
             }
         }
         
-        private void RebotarPelota()
+        private void BounceBall()
         {
             if (ball.Top < scorePanel.Height)
             {
@@ -225,10 +224,10 @@ namespace ProyectoFinal_Arkanoid
                 {
                     if (cpb[i, j] != null && ball.Bounds.IntersectsWith(cpb[i, j].Bounds))
                     {
-                        DatosJuego.score += (int)(cpb[i, j].Golpes * DatosJuego.ticksCount);
-                        cpb[i, j].Golpes--;
+                        DatosJuego.score += (int)(cpb[i, j].Hits * DatosJuego.ticksCount);
+                        cpb[i, j].Hits--;
 
-                        if (cpb[i, j].Golpes == 0)
+                        if (cpb[i, j].Hits == 0)
                         {
                             Controls.Remove(cpb[i, j]);
                             cpb[i, j] = null;
@@ -248,7 +247,7 @@ namespace ProyectoFinal_Arkanoid
                 }
             }
         }
-        private void MoverPelota()
+        private void MoveBall()
         {
             ball.Left += DatosJuego.dirX;
             ball.Top += DatosJuego.dirY;
@@ -264,7 +263,7 @@ namespace ProyectoFinal_Arkanoid
 
             scorePanel.BackColor = Color.Transparent;
 
-            #region Label + PictureBox
+            //#region Label + PictureBox
             
             heart = new PictureBox();
 
@@ -275,12 +274,12 @@ namespace ProyectoFinal_Arkanoid
 
             heart.BackgroundImage = Image.FromFile("../../Recursos/Heart.png");
             heart.BackgroundImageLayout = ImageLayout.Stretch;
-            #endregion
+            //#endregion
 
-            #region N cantidad de PictureBox
-            hearts = new PictureBox[DatosJuego.vidas];
+            //#region N cantidad de PictureBox
+            hearts = new PictureBox[DatosJuego.lifes];
 
-            for(int i = 0; i < DatosJuego.vidas; i++)
+            for(int i = 0; i < DatosJuego.lifes; i++)
             {
                
                 hearts[i] = new PictureBox();
@@ -300,7 +299,7 @@ namespace ProyectoFinal_Arkanoid
                     hearts[i].Left = hearts[i - 1].Right + 5;
                 }
             }
-            #endregion
+            //#endregion
 
             
             remainingLifes = new Label();
@@ -309,7 +308,7 @@ namespace ProyectoFinal_Arkanoid
             
             remainingLifes.ForeColor = score.ForeColor = Color.White;
 
-            remainingLifes.Text = "x " + DatosJuego.vidas.ToString();
+            remainingLifes.Text = "x " + DatosJuego.lifes.ToString();
             score.Text = DatosJuego.score.ToString();
 
             remainingLifes.Font = score.Font = new Font("Microsoft YaHei", 24F);
@@ -341,10 +340,10 @@ namespace ProyectoFinal_Arkanoid
 
         private void UpdateElements()
         {
-            remainingLifes.Text = "x " + DatosJuego.vidas.ToString();
+            remainingLifes.Text = "x " + DatosJuego.lifes.ToString();
 
-            scorePanel.Controls.Remove(hearts[DatosJuego.vidas]);
-            hearts[DatosJuego.vidas] = null;
+            scorePanel.Controls.Remove(hearts[DatosJuego.lifes]);
+            hearts[DatosJuego.lifes] = null;
         }
     }
     

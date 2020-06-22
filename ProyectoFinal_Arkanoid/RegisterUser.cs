@@ -20,7 +20,7 @@ namespace ProyectoFinal_Arkanoid
                 switch (textBox1.Text)
                 {
                     case string aux when aux.Length > 15:
-                        throw new ExceededMaxCharactersException("No se puede introducir un nick de mas de 15 car");
+                        throw new ExceededMaxCharactersException("No se puede introducir un nickname que contenga mas de 15 caracteres");
                     case string aux when aux.Trim().Length == 0:
                         throw new EmptyNicknameException("No puede dejar campos vacios");
                     default:
