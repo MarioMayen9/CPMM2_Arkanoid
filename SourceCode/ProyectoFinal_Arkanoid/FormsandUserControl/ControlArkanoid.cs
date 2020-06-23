@@ -49,7 +49,7 @@ namespace ProyectoFinal_Arkanoid
             pictureBox1.Left = (Width / 2) - (pictureBox1.Width / 2);
             
             ball = new PictureBox();
-            ball.Width = ball.Height = 20;
+            ball.Width = ball.Height = 25;
             
             ball.BackgroundImage = Image.FromFile("../../Recursos/bola.png");
             ball.BackgroundImageLayout = ImageLayout.Stretch;
@@ -140,7 +140,7 @@ namespace ProyectoFinal_Arkanoid
         {
             if (!DatosJuego.GameStarted)
                 return;
-            DatosJuego.ticksCount += 0.01;
+            
             try
             {
                 BallMovements?.Invoke();
@@ -241,7 +241,6 @@ namespace ProyectoFinal_Arkanoid
                         score.Text = DatosJuego.score.ToString();
                         if (remainingPb == 0)
                             WinningGame?.Invoke();
-
                         return;
                     }
                 }
@@ -263,7 +262,7 @@ namespace ProyectoFinal_Arkanoid
 
             scorePanel.BackColor = Color.Transparent;
 
-            //#region Label + PictureBox
+            
             
             heart = new PictureBox();
 
@@ -274,9 +273,8 @@ namespace ProyectoFinal_Arkanoid
 
             heart.BackgroundImage = Image.FromFile("../../Recursos/Heart.png");
             heart.BackgroundImageLayout = ImageLayout.Stretch;
-            //#endregion
+            
 
-            //#region N cantidad de PictureBox
             hearts = new PictureBox[DatosJuego.lifes];
 
             for(int i = 0; i < DatosJuego.lifes; i++)
@@ -299,9 +297,8 @@ namespace ProyectoFinal_Arkanoid
                     hearts[i].Left = hearts[i - 1].Right + 5;
                 }
             }
-            //#endregion
-
             
+
             remainingLifes = new Label();
             score = new Label();
 

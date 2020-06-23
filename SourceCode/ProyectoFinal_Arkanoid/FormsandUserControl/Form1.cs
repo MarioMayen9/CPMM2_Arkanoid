@@ -62,7 +62,7 @@ namespace ProyectoFinal_Arkanoid
            {
                PlayerController.CreateNewScore(currentPlayer.idPlayer, DatosJuego.score);
 
-               MessageBox.Show("ENHORABUENA HAS GANADO");
+               MessageBox.Show("ENHORABUENA HAS GANADO :)");
 
                ca.Hide();
                tableLayoutPanel1.Show();
