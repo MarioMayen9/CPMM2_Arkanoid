@@ -22,12 +22,10 @@ namespace Arkanoid
             }
         }
 
-        public static void CreateNewScore(int idPlayer, int score)
+        public static void CreateNewScore(string player, int score)
         {
-            DataBaseController.ExecuteNonQuery("INSERT INTO SCORES(idPlayer, score) VALUES" +
-                                               $"({idPlayer}, {score})");
+            DataBaseController.ExecuteNonQuery(string.Format("insert into scores(score, idplayer) select {0}, pl.idplayer from player pl where pl.nickname = '{1}' ", score, player));
         }
-
         public static List<Player> ObtainTopPlayers()
         {
             var topPlayers = new List<Player>();

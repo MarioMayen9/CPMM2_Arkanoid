@@ -9,7 +9,7 @@
         public static void InitializeGame()
         {
             GameStarted = false;
-            ticksCount = 0;
+            ticksCount = 1;
             lifes = 3;
             score = 0;
         }

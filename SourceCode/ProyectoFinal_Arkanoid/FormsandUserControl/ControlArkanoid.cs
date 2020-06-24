@@ -158,7 +158,7 @@ namespace ProyectoFinal_Arkanoid
 
                     if (DatosJuego.lifes == 0)
                     {
-                        throw new NoRemainingLifesException("");
+                        throw new NoRemainingLifesException("F");
                     }
                 }
                 catch (NoRemainingLifesException ex2)
